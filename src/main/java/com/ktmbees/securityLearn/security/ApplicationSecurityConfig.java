@@ -51,7 +51,8 @@ public class ApplicationSecurityConfig extends WebSecurityConfigurerAdapter {
                 .defaultSuccessUrl("/courses",true)
                 .and().rememberMe()
                 .tokenValiditySeconds((int) TimeUnit.DAYS.toSeconds(21))
-                .key("savib");
+                .key("savib")
+                .and().logout();
     }
 
     @Override
